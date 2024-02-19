@@ -1,93 +1,283 @@
-{{#if banners.bottom}}
-    <div class="banners" data-banner-location="bottom">
-        {{#each (limit banners.bottom_metadata 1)}}
-            <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-name="{{this.banner-name}}">
-                <div data-event-type="promotion-click">
-                    {{{this.content}}}
+
+<footer class="bg-dark text-white py-4 mt-3" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-uppercase text-white">Customer Service</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <p class="mb-2"><strong>Call/Text:</strong><br><a>(888) 689-7040</a></p><a class="btn btn-outline-warning mb-2" role="button" href="contact/">Send Us A Message</a>
+                    </div>
+                    <div class="col-12 text-center text-lg-start d-sm-none d-md-block"><img class="img-fluid" src="https://cdn.cdslink.net/join-the-cheap-nation-png24.webp" alt="Cheap A Dealer Supplies" loading="lazy"></div>
+                </div>
+                <div class="row d-md-none">
+                    <div class="col">
+                        <hr>
+                    </div>
                 </div>
             </div>
-        {{/each}}
-    </div>
-{{/if}}
-<footer class="footer" role="contentinfo">
-    <h2 class="footer-title-sr-only">{{lang 'footer.title'}}</h2>
-    <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
-            <article class="footer-info-col
-                footer-info-col--social
-                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
-                data-section-type="footer-webPages">
-                    <h3 class="footer-info-heading">{{lang 'social.connect'}}</h3>
-                    {{> components/common/social-links}}
-            </article>
-        {{/if}}
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h3 class="footer-info-heading">{{lang 'footer.navigate'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h3 class="footer-info-heading">{{lang 'footer.categories'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
-
-            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h3 class="footer-info-heading">{{lang 'footer.brands'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-            {{/and}}
-
-            {{#if settings.address}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h3 class="footer-info-heading">{{lang 'footer.info'}}</h3>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-            {{/if}}
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
-                {{#if settings.show_newsletter_box}}
-                    {{> components/common/subscription-form}}
-                {{/if}}
-                {{> components/common/payment-icons}}
-            </article>
-        </section>
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">{{lang 'footer.powered_by'}} <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
+            <div class="col">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-uppercase text-center text-warning text-sm-left mb-3"><em>TRUSTED EVERYDAY BY GREAT CUSTOMERS LIKE YOU!</em></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-center align-self-center">
+                                <h5 class="text-uppercase d-flex justify-content-lg-center align-items-lg-center mb-2">Google Rated <br>5-Stars</h5>
+                                <div class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="text-warning fa-lg">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="text-warning fa-lg">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="text-warning fa-lg">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="text-warning fa-lg">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="text-warning fa-lg">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg></div>
+                                <h6 class="mb-2 fst-italic">With Over 120 Reviews!</h6><a class="btn btn-outline-warning mb-2" role="button" href="https://g.page/CheapAssDealerSupplies" target="_blank">See for Yourself</a>
+                                <p class="mb-2 mb-lg-0 fst-italic">We don't just talk customer service, we live it everday!</p>
+                            </div>
+                            <div class="col-6 text-center"><img class="img-fluid mb-2" src="http://cdn.cheapdealersupplies.com/assets/img/satisfaction-guaranteed-badge138px.webp" alt="Satisfaction Guarantee">
+                                <h6 class="mb-0">Don't like it?&nbsp; <br>Send it back.</h6><a class="fs-1 link-secondary text-size-small" href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="row">
+                            <div class="col mt-2 mt-md-0">
+                                <h5 class="text-uppercase text-white">DEAL ALERTS</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form class="form mb-0" action="/subscribe.php" method="post">
+                                    <div class="row gx-2">
+                                        <div class="col"><input class="form-control" type="email" name="email" placeholder="Enter email address"></div>
+                                        <div class="col-auto"><button class="btn btn-outline-warning fst-italic" type="button">GO!</button></div>
+                                    </div>
+                                </form>
+                                <p style="font-size:13px;padding-top:5px;line-height:1.4em;">Be the first to know about deals, specials and new coupon codes.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center text-md-start"><img class="img-fluid" src="https://cdn.cdslink.net/logo-425-139-300-gray.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6 col-md-5 col-lg-4">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-uppercase text-white">My Account</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <ul>
+                                    <li><a class="text-white text-decoration-none" href="#">Order History</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Order Tracking</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Print Invoice</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Manage Credit Cards</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Credit Card Charge Inquiry</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Apply for Invoicing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-4">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-uppercase text-white">ABOUT US</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <ul>
+                                    <li><a class="text-white text-decoration-none" href="#">Contact Us</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">About Us</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">We're Hiring</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">W-9 Form</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-4">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-uppercase text-white">Policies &amp; LEgal</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li><a class="text-white text-decoration-none" href="#">Shipping Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Return Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Privacy Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Terms of Service</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">DMCA</a></li>
+                                    <li><a class="text-white text-decoration-none" href="#">Accessibility Statement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6 text-center text-lg-start mb-3 mb-md-0">
+                        <h5 class="text-uppercase text-white">WE ACCEPT THE FOLLOWING PAYMENTS</h5><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="fa-3x me-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="fa-3x me-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M48 480C21.49 480 0 458.5 0 432V80C0 53.49 21.49 32 48 32H528C554.5 32 576 53.49 576 80V82.43H500.5L483.5 130L466.6 82.43H369.4V145.6L341.3 82.43H262.7L181 267.1H246.8V430.9H450.5L482.4 395.8L514.3 430.9H576V432C576 458.5 554.5 480 528 480H48zM482.6 364L440.4 410.3H390.5L458 338.6L390.5 266.1H441.9L483.4 312.8L525.4 266.1H576L508 338.2L576 410.3H524.6L482.6 364zM576 296.9V380.2L536.7 338.3L576 296.9zM307.6 377.1H390.6V410.3H268.6V267.1H390.6V300.2H307.6V322.6H388.5V354.9H307.6V377.2V377.1zM537.3 145.7L500.4 246.3H466L429.2 146V246.3H390.5V103H451.7L483.6 192.3L515.8 103H576V246.3H537.3V145.7zM334.5 217.6H268.6L256.7 246.3H213.7L276.1 103H327.3L390.6 246.3H346.5L334.5 217.6zM301.5 138.5L282 185.4H320.9L301.5 138.5z"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="fa-3x me-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M520.4 196.1c0-7.9-5.5-12.1-15.6-12.1h-4.9v24.9h4.7c10.3 0 15.8-4.4 15.8-12.8zM528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-44.1 138.9c22.6 0 52.9-4.1 52.9 24.4 0 12.6-6.6 20.7-18.7 23.2l25.8 34.4h-19.6l-22.2-32.8h-2.2v32.8h-16zm-55.9.1h45.3v14H444v18.2h28.3V217H444v22.2h29.3V253H428zm-68.7 0l21.9 55.2 22.2-55.2h17.5l-35.5 84.2h-8.6l-35-84.2zm-55.9-3c24.7 0 44.6 20 44.6 44.6 0 24.7-20 44.6-44.6 44.6-24.7 0-44.6-20-44.6-44.6 0-24.7 20-44.6 44.6-44.6zm-49.3 6.1v19c-20.1-20.1-46.8-4.7-46.8 19 0 25 27.5 38.5 46.8 19.2v19c-29.7 14.3-63.3-5.7-63.3-38.2 0-31.2 33.1-53 63.3-38zm-97.2 66.3c11.4 0 22.4-15.3-3.3-24.4-15-5.5-20.2-11.4-20.2-22.7 0-23.2 30.6-31.4 49.7-14.3l-8.4 10.8c-10.4-11.6-24.9-6.2-24.9 2.5 0 4.4 2.7 6.9 12.3 10.3 18.2 6.6 23.6 12.5 23.6 25.6 0 29.5-38.8 37.4-56.6 11.3l10.3-9.9c3.7 7.1 9.9 10.8 17.5 10.8zM55.4 253H32v-82h23.4c26.1 0 44.1 17 44.1 41.1 0 18.5-13.2 40.9-44.1 40.9zm67.5 0h-16v-82h16zM544 433c0 8.2-6.8 15-15 15H128c189.6-35.6 382.7-139.2 416-160zM74.1 191.6c-5.2-4.9-11.6-6.6-21.9-6.6H48v54.2h4.2c10.3 0 17-2 21.9-6.4 5.7-5.2 8.9-12.8 8.9-20.7s-3.2-15.5-8.9-20.5z"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="fa-3x me-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M482.9 410.3c0 6.8-4.6 11.7-11.2 11.7-6.8 0-11.2-5.2-11.2-11.7 0-6.5 4.4-11.7 11.2-11.7 6.6 0 11.2 5.2 11.2 11.7zm-310.8-11.7c-7.1 0-11.2 5.2-11.2 11.7 0 6.5 4.1 11.7 11.2 11.7 6.5 0 10.9-4.9 10.9-11.7-.1-6.5-4.4-11.7-10.9-11.7zm117.5-.3c-5.4 0-8.7 3.5-9.5 8.7h19.1c-.9-5.7-4.4-8.7-9.6-8.7zm107.8.3c-6.8 0-10.9 5.2-10.9 11.7 0 6.5 4.1 11.7 10.9 11.7 6.8 0 11.2-4.9 11.2-11.7 0-6.5-4.4-11.7-11.2-11.7zm105.9 26.1c0 .3.3.5.3 1.1 0 .3-.3.5-.3 1.1-.3.3-.3.5-.5.8-.3.3-.5.5-1.1.5-.3.3-.5.3-1.1.3-.3 0-.5 0-1.1-.3-.3 0-.5-.3-.8-.5-.3-.3-.5-.5-.5-.8-.3-.5-.3-.8-.3-1.1 0-.5 0-.8.3-1.1 0-.5.3-.8.5-1.1.3-.3.5-.3.8-.5.5-.3.8-.3 1.1-.3.5 0 .8 0 1.1.3.5.3.8.3 1.1.5s.2.6.5 1.1zm-2.2 1.4c.5 0 .5-.3.8-.3.3-.3.3-.5.3-.8 0-.3 0-.5-.3-.8-.3 0-.5-.3-1.1-.3h-1.6v3.5h.8V426h.3l1.1 1.4h.8l-1.1-1.3zM576 81v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V81c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM64 220.6c0 76.5 62.1 138.5 138.5 138.5 27.2 0 53.9-8.2 76.5-23.1-72.9-59.3-72.4-171.2 0-230.5-22.6-15-49.3-23.1-76.5-23.1-76.4-.1-138.5 62-138.5 138.2zm224 108.8c70.5-55 70.2-162.2 0-217.5-70.2 55.3-70.5 162.6 0 217.5zm-142.3 76.3c0-8.7-5.7-14.4-14.7-14.7-4.6 0-9.5 1.4-12.8 6.5-2.4-4.1-6.5-6.5-12.2-6.5-3.8 0-7.6 1.4-10.6 5.4V392h-8.2v36.7h8.2c0-18.9-2.5-30.2 9-30.2 10.2 0 8.2 10.2 8.2 30.2h7.9c0-18.3-2.5-30.2 9-30.2 10.2 0 8.2 10 8.2 30.2h8.2v-23zm44.9-13.7h-7.9v4.4c-2.7-3.3-6.5-5.4-11.7-5.4-10.3 0-18.2 8.2-18.2 19.3 0 11.2 7.9 19.3 18.2 19.3 5.2 0 9-1.9 11.7-5.4v4.6h7.9V392zm40.5 25.6c0-15-22.9-8.2-22.9-15.2 0-5.7 11.9-4.8 18.5-1.1l3.3-6.5c-9.4-6.1-30.2-6-30.2 8.2 0 14.3 22.9 8.3 22.9 15 0 6.3-13.5 5.8-20.7.8l-3.5 6.3c11.2 7.6 32.6 6 32.6-7.5zm35.4 9.3l-2.2-6.8c-3.8 2.1-12.2 4.4-12.2-4.1v-16.6h13.1V392h-13.1v-11.2h-8.2V392h-7.6v7.3h7.6V416c0 17.6 17.3 14.4 22.6 10.9zm13.3-13.4h27.5c0-16.2-7.4-22.6-17.4-22.6-10.6 0-18.2 7.9-18.2 19.3 0 20.5 22.6 23.9 33.8 14.2l-3.8-6c-7.8 6.4-19.6 5.8-21.9-4.9zm59.1-21.5c-4.6-2-11.6-1.8-15.2 4.4V392h-8.2v36.7h8.2V408c0-11.6 9.5-10.1 12.8-8.4l2.4-7.6zm10.6 18.3c0-11.4 11.6-15.1 20.7-8.4l3.8-6.5c-11.6-9.1-32.7-4.1-32.7 15 0 19.8 22.4 23.8 32.7 15l-3.8-6.5c-9.2 6.5-20.7 2.6-20.7-8.6zm66.7-18.3H408v4.4c-8.3-11-29.9-4.8-29.9 13.9 0 19.2 22.4 24.7 29.9 13.9v4.6h8.2V392zm33.7 0c-2.4-1.2-11-2.9-15.2 4.4V392h-7.9v36.7h7.9V408c0-11 9-10.3 12.8-8.4l2.4-7.6zm40.3-14.9h-7.9v19.3c-8.2-10.9-29.9-5.1-29.9 13.9 0 19.4 22.5 24.6 29.9 13.9v4.6h7.9v-51.7zm7.6-75.1v4.6h.8V302h1.9v-.8h-4.6v.8h1.9zm6.6 123.8c0-.5 0-1.1-.3-1.6-.3-.3-.5-.8-.8-1.1-.3-.3-.8-.5-1.1-.8-.5 0-1.1-.3-1.6-.3-.3 0-.8.3-1.4.3-.5.3-.8.5-1.1.8-.5.3-.8.8-.8 1.1-.3.5-.3 1.1-.3 1.6 0 .3 0 .8.3 1.4 0 .3.3.8.8 1.1.3.3.5.5 1.1.8.5.3 1.1.3 1.4.3.5 0 1.1 0 1.6-.3.3-.3.8-.5 1.1-.8.3-.3.5-.8.8-1.1.3-.6.3-1.1.3-1.4zm3.2-124.7h-1.4l-1.6 3.5-1.6-3.5h-1.4v5.4h.8v-4.1l1.6 3.5h1.1l1.4-3.5v4.1h1.1v-5.4zm4.4-80.5c0-76.2-62.1-138.3-138.5-138.3-27.2 0-53.9 8.2-76.5 23.1 72.1 59.3 73.2 171.5 0 230.5 22.6 15 49.5 23.1 76.5 23.1 76.4.1 138.5-61.9 138.5-138.4z"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="fa-3x">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M186.3 258.2c0 12.2-9.7 21.5-22 21.5-9.2 0-16-5.2-16-15 0-12.2 9.5-22 21.7-22 9.3 0 16.3 5.7 16.3 15.5zM80.5 209.7h-4.7c-1.5 0-3 1-3.2 2.7l-4.3 26.7 8.2-.3c11 0 19.5-1.5 21.5-14.2 2.3-13.4-6.2-14.9-17.5-14.9zm284 0H360c-1.8 0-3 1-3.2 2.7l-4.2 26.7 8-.3c13 0 22-3 22-18-.1-10.6-9.6-11.1-18.1-11.1zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM128.3 215.4c0-21-16.2-28-34.7-28h-40c-2.5 0-5 2-5.2 4.7L32 294.2c-.3 2 1.2 4 3.2 4h19c2.7 0 5.2-2.9 5.5-5.7l4.5-26.6c1-7.2 13.2-4.7 18-4.7 28.6 0 46.1-17 46.1-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.2 8.2-5.8-8.5-14.2-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9 0 20.2-4.9 26.5-11.9-.5 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H200c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm40.5 97.9l63.7-92.6c.5-.5.5-1 .5-1.7 0-1.7-1.5-3.5-3.2-3.5h-19.2c-1.7 0-3.5 1-4.5 2.5l-26.5 39-11-37.5c-.8-2.2-3-4-5.5-4h-18.7c-1.7 0-3.2 1.8-3.2 3.5 0 1.2 19.5 56.8 21.2 62.1-2.7 3.8-20.5 28.6-20.5 31.6 0 1.8 1.5 3.2 3.2 3.2h19.2c1.8-.1 3.5-1.1 4.5-2.6zm159.3-106.7c0-21-16.2-28-34.7-28h-39.7c-2.7 0-5.2 2-5.5 4.7l-16.2 102c-.2 2 1.3 4 3.2 4h20.5c2 0 3.5-1.5 4-3.2l4.5-29c1-7.2 13.2-4.7 18-4.7 28.4 0 45.9-17 45.9-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.3 8.2-5.5-8.5-14-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9.3 0 20.5-4.9 26.5-11.9-.3 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H484c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm47.5-33.3c0-2-1.5-3.5-3.2-3.5h-18.5c-1.5 0-3 1.2-3.2 2.7l-16.2 104-.3.5c0 1.8 1.5 3.5 3.5 3.5h16.5c2.5 0 5-2.9 5.2-5.7L544 191.2v-.3zm-90 51.8c-12.2 0-21.7 9.7-21.7 22 0 9.7 7 15 16.2 15 12 0 21.7-9.2 21.7-21.5.1-9.8-6.9-15.5-16.2-15.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="col-md-6 text-center text-lg-start">
+                        <h5 class="text-uppercase text-white">Safe &amp; Secure</h5><svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 0 512 512" width="1em" height="1em" fill="currentColor" class="fa-4x mb-2 me-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M248 43.4C130.6 43.4 35.4 138.6 35.4 256S130.6 468.6 248 468.6 460.6 373.4 460.6 256 365.4 43.4 248 43.4zm-97.4 132.9c0-53.7 43.7-97.4 97.4-97.4s97.4 43.7 97.4 97.4v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6c0-82.1-124-82.1-124 0v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6zM389.7 380c0 9.7-8 17.7-17.7 17.7H124c-9.7 0-17.7-8-17.7-17.7V238.3c0-9.7 8-17.7 17.7-17.7h248c9.7 0 17.7 8 17.7 17.7V380zm-248-137.3v132.9c0 2.5-1.9 4.4-4.4 4.4h-8.9c-2.5 0-4.4-1.9-4.4-4.4V242.7c0-2.5 1.9-4.4 4.4-4.4h8.9c2.5 0 4.4 1.9 4.4 4.4zm141.7 48.7c0 13-7.2 24.4-17.7 30.4v31.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-31.6c-10.5-6.1-17.7-17.4-17.7-30.4 0-19.7 15.8-35.4 35.4-35.4s35.5 15.8 35.5 35.4zM248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 478.3C121 486.3 17.7 383 17.7 256S121 25.7 248 25.7 478.3 129 478.3 256 375 486.3 248 486.3z"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor" class="fa-4x mb-2">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352H592c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48H516h-4-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48H48c-26.5 0-48 21.5-48 48V304c0 26.5 21.5 48 48 48H156.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z"></path>
+                        </svg>
+                        <div class="m-0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications."><a href="https://seal.digicert.com/seals/popup/?tag=YLQa6JUm&amp;url=cheapdealersupplies.com" tabindex="-1" target="GEOTRUST_SSL_Splash" rel="nofollow" class="img-fluid"></a></div>
+                        <p class="mb-1" style="font-size:13px;">256-bit SSL Bank Grade <br>Encryption Enabled End-to-End</p>
+                    </div>
+                </div>
             </div>
-        {{/if}}
-        {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <hr>
             </div>
-        {{/if}}
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <p class="small">© {{moment format="YYYY"}} {{settings.store_name}} . All Rights Reserved.&nbsp; All images and descriptions are not to be used without written permission. Remember to have fun and smile&nbsp; :)&nbsp;&nbsp;<a class="link-secondary" href="{{sitemap}}">Site Map</a></p>
+            </div>
+        </div>
     </div>
-    {{{region name="ssl_site_seal--global"}}}
 </footer>
+<div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="cart-canvas">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Shopping Cart</h4>
+        <h5>$1,343.54</h5><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row d-flex justify-content-center h-100">
+            <div class="col-10">
+                <div class="card rounded mb-4">
+                    <div class="card-body p-4">
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <p class="lead fw-normal mb-0">Exterior Buyers Guides - As Is / Implied Warranty</p>
+                                <hr class="my-2">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5"><img class="rounded img-fluid" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp" alt="Cotton T-shirt"></div>
+                            <div class="col-7">
+                                <p class="mb-0"><span class="text-muted">SKU: </span>&nbsp;507-1</p>
+                                <p class="mb-0"><span class="text-muted">Size: </span>&nbsp;8.5"x11"</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-7 d-flex"><button class="btn btn-link px-2"><i class="fas fa-minus"></i></button><input class="form-control-sm form-control text-center" type="number" id="form1" min="0" name="quantity" value="2"><button class="btn btn-link px-2"><i class="fas fa-plus"></i></button></div>
+                            <div class="col-5">
+                                <h5 class="mb-0">$499.00</h5>
+                            </div>
+                        </div><a class="text-dark position-absolute top-0 start-100 translate-middle" href="#"><i class="fas fa-times-circle"></i></a>
+                    </div>
+                </div>
+                <div class="card rounded">
+                    <div class="card-body"><button class="btn btn-success btn-lg w-100" type="button">Proceed to Pay</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="navigation-canvas">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Shop By Category</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row pt-0">
+            <div class="col">
+                <h5 class="my-2">A</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/addendum-stickers/"><span>Addendum Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/adhesive-vehicle-wrap/"><span>Adhessive Wrap</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-air-fresheners/"><span>Air Fresheners</span></a></div>
+                <h5 class="ml-2 mt-3">B</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dealership-balloons/"><span>Balloons</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/buyers-guide/"><span>Buyers Guides</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/buyers-guide-holders/"><span>Buyers Guide Holders</span></a></div>
+                <h5 class="ml-2 mt-3">C</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-bows/"><span>Car Bows</span></a></div>
+                <h5 class="ml-2 mt-3">D</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/deal-jackets/"><span>Deal Jackets</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dispatch-numbers/"><span>Dispatch Numbers</span></a></div>
+                <h5 class="my-2">F</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-window-flags/"><span>Flags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/all-car-floor-mats-carpet-paper-plastic-adhesive/"><span>Floor Mats</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/floor-mat-dispensers/"><span>Floor Mat Racks</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-dealership-forms/"><span>Forms</span></a></div>
+                <h5 class="ml-2 mt-3">H</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/hang-tags/"><span>Hang Tags</span></a></div>
+                <h5 class="ml-2 mt-3">K</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/key-cabinets/"><span>Key Storage</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/key-tags/"><span>Key Tags</span></a></div>
+                <h5 class="ml-2 mt-3">L</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/temp-tag-covers/"><span>License Plate Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/screws/"><span>License Plate Screws</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/license-plate-envelopes/"><span>License Plate Envelopes</span></a></div>
+                <h5 class="ml-2 mt-3">M</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/night-drop-boxes/"><span>Markers</span></a></div>
+                <h5 class="ml-2 mt-3">N</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/night-drop-boxes/"><span>Night Drop Boxes</span></a></div>
+            </div>
+            <div class="col">
+                <h5 class="my-2">O</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/windshield-year-stickers/"><span>Oval Model Years</span></a></div>
+                <h5 class="ml-2 mt-3">P</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/paint-markers/"><span>Paint Pens / Markers</span></a></div>
+                <h5 class="ml-2 mt-3">R</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/repair-orders-holders/"><span>Repair Orders (ROs)</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/repair-orders-holders/"><span>Repair Order Holders</span></a></div>
+                <h5 class="ml-2 mt-3">S</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/seat-covers/"><span>Seat Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dispatch-numbers/"><span>Service Control Numbers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/service-due-reminder-stickers"><span>Service Due Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/service-forms/"><span>Service Forms</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dealership-signs/"><span>Signs</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/steering-wheel-covers/"><span>Steering Wheel Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/stock-stickers/"><span>Stock Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/lot-streamers/"><span>Streamers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/swooper-banners/"><span>Swooper Banners</span></a></div>
+                <h5 class="my-2">T</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/temp-tag-covers/"><span>Temp Tag Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/printable-temp-tags/"><span>Tempory Tags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/time-job-tickets/"><span>Time &amp; Job Tickets</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/tire-covers/"><span>Tire Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/tire-covers/"><span>Tire Maskers</span></a></div>
+                <h5 class="ml-2 mt-3">U</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/underhood-signs/"><span>Underhood Signs</span></a></div>
+                <h5 class="ml-2 mt-3">V</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/vehicle-covers/"><span>Vehicle Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/vehicle-not-for-sale-sticker-100-per-pack/"><span>Vehicle Not For Sale Stickers</span></a></div>
+                <h5 class="ml-2 mt-3">W</h5>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/window-stickers/"><span>Window Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/windshield-numbers/"><span>Windshield Digits</span></a></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-end">
+                <hr><button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

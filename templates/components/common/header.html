@@ -1,34 +1,152 @@
-<a href="#main-content" class="skip-to-main-link">{{lang 'header.skip_to_main'}}</a>
-{{#if banners.top}}
-<div class="banners" data-banner-location="top">
-    {{#each (limit banners.top_metadata 1)}}
-    <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
-        <div data-event-type="promotion-click">
-            {{{this.content}}}
+<!--BEGIN HEADER !-->
+<div class="container-fluid bg-light">
+    <div class="row justify-content-center align-items-center justify-content-md-between">
+        <div class="col-auto py-1 border-bottom border-light">
+            <div class="btn-group btn-group-sm" role="group"><a
+                    class="btn btn-link d-flex align-items-center border-end text-decoration-none text-dark fw-bold"
+                    role="button" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em"
+                        height="1em" fill="currentColor" class="me-2">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z">
+                        </path>
+                    </svg>1-888-689-7040</a><a
+                    class="btn btn-link fw-semibold d-flex align-items-center text-decoration-none" role="button"
+                    href="#">Customer Service</a></div>
+        </div>
+        <div class="col-auto text-center text-md-end d-none d-md-flex py-1 border-bottom border-light">
+            <div class="btn-group btn-group-sm" role="group"><a
+                    class="btn btn-link fw-semibold border-end text-decoration-none" role="button"
+                    href="{{urls.account.orders.all}}">Track
+                    Order</a><a class="btn btn-link fw-semibold border-end text-decoration-none" role="button"
+                    href="https://cdslink.com/invoice">Invoice Lookup</a><a
+                    class="btn btn-link fw-semibold text-decoration-none" role="button"
+                    href="{{urls.checkout.single_address}}">Checkout</a></div>
         </div>
     </div>
-    {{/each}}
 </div>
-{{/if}}
-<header class="header" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
-    {{> components/common/navigation}}
-
-    {{#if page_type '===' 'default'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
+<div class="container">
+    <div class="row d-flex align-items-center bg-white">
+        <div class="col-8 col-sm-6 col-md-5 col-lg-3 d-flex order-1 mx-auto py-2 py-lg-0"><a href="{{urls.home}}"><img
+                    class="img-fluid" src="https://cdn.cdslink.net/logo-260x85-300.png" width="260" height="auto"></a>
         </div>
-    {{/if}}
-    <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
+        <div class="col-12 col-md-10 col-lg-4 text-center order-3 mx-auto">
+            <form>
+                <div class="input-group mt-2 mt-lg-0"><input class="form-control" type="text"
+                        placeholder="Search keywords, Item #..." name="search"><button class="btn btn-primary"
+                        type="submit"><i class="fas fa-search fa-lg"></i></button></div>
+            </form>
+        </div>
+        <div class="col-auto d-flex order-2 mx-auto order-lg-3"><a class="btn btn-link text-decoration-none"
+                role="button" href="{{urls.account.orders.all}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    width="1em" height="1em" fill="currentColor" class="me-1" style="font-size: 25px;">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z">
+                    </path>
+                </svg><span class="text-dark ms-1 fw-semibold">Reorder</span></a>
+            <div class="dropdown text-decoration-none"><button class="btn btn-link text-decoration-none"
+                    aria-expanded="false" data-bs-toggle="dropdown" type="button"><svg class="me-1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em"
+                        fill="currentColor" style="font-size: 25px;">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z">
+                        </path>
+                    </svg><span class="text-dark ms-1 fw-semibold">Login/Register</span></button>
+                <div class="dropdown-menu"><a class="dropdown-item" href="{{urls.auth.login}}">Sign-in</a><a class="dropdown-item"
+                        href="{{urls.auth.create_account}}">Register</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="{{urls.auth.logout}}">Sign-out</a>
+                </div>
+            </div>
+
+            <button class="btn btn-link position-relative me-2 text-decoration-none" type="button"
+                data-bs-target="#cart-canvas" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" class="me-1"
+                    style="font-size: 25px;">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+                    </path>
+                </svg><span
+                    class="badge rounded-pill bg-success position-absolute top-0 start-100 translate-middle">23</span><span
+                    class="d-none d-lg-inline text-dark ms-1 fw-semibold">My Cart</span></button>
+        </div>
     </div>
-    {{{region name="header_navigation_bottom--global"}}}
-</header>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-between mt-2 bg-custom-1">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg nav-fill container" data-bs-theme="dark">
+                <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler"
+                        data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav d-flex flex-lg-grow-1">
+                            <li class="nav-item text-uppercase"><a
+                                    class="nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold"
+                                    href="#" data-bs-target="#navigation-canvas" data-bs-toggle="offcanvas"><svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em"
+                                        height="1em" fill="currentColor">
+                                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M448 64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32zm0 256c0-17.7-14.3-32-32-32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32zM0 192c0 17.7 14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H32c-17.7 0-32 14.3-32 32zM448 448c0-17.7-14.3-32-32-32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32z">
+                                        </path>
+                                    </svg>&nbsp;Shop All Categories</a></li>
+                            <li class="nav-item dropdown"><a
+                                    class="dropdown-toggle nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#">My Account</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="{{urls.account.orders.all}}">Orders &amp;
+                                        Invoices</a><a class="dropdown-item" href="{{urls.account.details}}">My Profile</a><a
+                                        class="dropdown-item" href="{{urls.account.addresses}}">Shipping Addresses</a><a class="dropdown-item"
+                                        href="{{urls.account.payment_methods.all}}">Saved Credit Cards</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Apply for
+                                        Invoicing</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><a
+                                    class="dropdown-toggle nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#">Forms</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="#">Sales Forms</a><a
+                                        class="dropdown-item" href="#">Service Forms</a><a class="dropdown-item"
+                                        href="#">Office Forms</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">All
+                                        Forms</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a
+                                    class="nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    href="#">Deal Jackets</a></li>
+                            <li class="nav-item dropdown"><a
+                                    class="dropdown-toggle nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#">Key Tags</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="#">Donkey Key Tags<span
+                                            class="badge bg-primary ms-2 fw-semibold">Exclusive</span></a><a
+                                        class="dropdown-item" href="#">Versa-Tag Key Tags</a><a class="dropdown-item"
+                                        href="#">Service Key Tags</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">All Key
+                                        Tags</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a
+                                    class="nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    href="#">Window Stickers</a></li>
+                            <li class="nav-item d-lg-none d-xl-flex"><a
+                                    class="nav-link d-flex align-items-center justify-content-lg-center text-white fw-bold text-uppercase"
+                                    href="#">Floor Mats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center align-self-center bg-light py-2 mb-2"><span
+                class="text-uppercase fw-bold text-danger">Service Essentials +&nbsp;Free Shipping on
+                ALL&nbsp;orders over $149!&nbsp;</span><a class="link-secondary text-size-small" href="#">(Terms
+                &amp; Conditions Apply)</a></div>
+    </div>
+</div>
+<!-- END HEADER !-->
 {{{region name="header_bottom--global"}}}
 {{{region name="header_bottom"}}}
