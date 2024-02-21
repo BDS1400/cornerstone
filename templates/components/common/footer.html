@@ -51,7 +51,7 @@
                                 <p class="mb-2 mb-lg-0 fst-italic">We don't just talk customer service, we live it everday!</p>
                             </div>
                             <div class="col-6 text-center"><img class="img-fluid mb-2" src="http://cdn.cheapdealersupplies.com/assets/img/satisfaction-guaranteed-badge138px.webp" alt="Satisfaction Guarantee">
-                                <h6 class="mb-0">Don't like it?&nbsp; <br>Send it back.</h6><a class="fs-1 link-secondary text-size-small" href="#">Terms &amp; Conditions</a>
+                                <h6 class="mb-0">Don't like it?<br>Send it back.</h6><a class="fs-1 link-secondary text-size-small" href="{{settings.base_url}}/refund-return-policy/">Terms &amp; Conditions</a>
                             </div>
                         </div>
                     </div>
@@ -63,13 +63,18 @@
                         </div>
                         <div class="row">
                             <div class="col">
+                                <div class="klaviyo-form-X7FSaU"></div>
+
+                                <!--
                                 <form class="form mb-0" action="/subscribe.php" method="post">
                                     <div class="row gx-2">
                                         <div class="col"><input class="form-control" type="email" name="email" placeholder="Enter email address"></div>
                                         <div class="col-auto"><button class="btn btn-outline-warning fst-italic" type="button">GO!</button></div>
                                     </div>
                                 </form>
+                              !-->  
                                 <p style="font-size:13px;padding-top:5px;line-height:1.4em;">Be the first to know about deals, specials and new coupon codes.</p>
+                          
                             </div>
                         </div>
                         <div class="row">
@@ -92,12 +97,12 @@
                         <div class="row">
                             <div class="col mb-3">
                                 <ul>
-                                    <li><a class="text-white text-decoration-none" href="#">Order History</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Order Tracking</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Print Invoice</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Manage Credit Cards</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Credit Card Charge Inquiry</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Apply for Invoicing</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{urls.account.orders.all}}">Order History</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{urls.account.orders.all}}">Order Tracking</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{urls.account.orders.all}}">Download Invoices</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/account.php?action=payment_methods">Manage Saved Credit Cards</a></li>
+                                    <li><a class="text-white text-decoration-none" href="https://cads2.com/charge" target="_blank">Credit Card Charge Inquiry</a></li>
+                                    <li><a class="text-white text-decoration-none" href="https://cads2.com/invoicing-application" target="_blank">Apply for Invoicing</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,10 +116,10 @@
                         <div class="row">
                             <div class="col mb-3">
                                 <ul>
-                                    <li><a class="text-white text-decoration-none" href="#">Contact Us</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">About Us</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">We're Hiring</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">W-9 Form</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/contact-us/">Contact Us</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/about-us/">About Us</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/were-hiring/">We're Hiring</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/w9/">W-9 Form</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -122,18 +127,18 @@
                     <div class="col-sm-6 col-md-5 col-lg-4">
                         <div class="row">
                             <div class="col">
-                                <h5 class="text-uppercase text-white">Policies &amp; LEgal</h5>
+                                <h5 class="text-uppercase text-white">Policies &amp; Legal</h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <ul>
-                                    <li><a class="text-white text-decoration-none" href="#">Shipping Policy</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Return Policy</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Privacy Policy</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Terms of Service</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">DMCA</a></li>
-                                    <li><a class="text-white text-decoration-none" href="#">Accessibility Statement</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/shipping/">Shipping Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/refund-return-policy/">Return Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/privacy-policy/">Privacy Policy</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/terms/">Terms of Service</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/dmca-policy/">DMCA</a></li>
+                                    <li><a class="text-white text-decoration-none" href="{{settings.base_url}}/accessibility-statement/">Accessibility Statement</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -171,7 +176,6 @@
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
                             <path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352H592c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48H516h-4-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48H48c-26.5 0-48 21.5-48 48V304c0 26.5 21.5 48 48 48H156.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z"></path>
                         </svg>
-                        <div class="m-0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications."><a href="https://seal.digicert.com/seals/popup/?tag=YLQa6JUm&amp;url=cheapdealersupplies.com" tabindex="-1" target="GEOTRUST_SSL_Splash" rel="nofollow" class="img-fluid"></a></div>
                         <p class="mb-1" style="font-size:13px;">256-bit SSL Bank Grade <br>Encryption Enabled End-to-End</p>
                     </div>
                 </div>
@@ -184,7 +188,7 @@
         </div>
         <div class="row mt-2">
             <div class="col">
-                <p class="small">© {{moment format="YYYY"}} {{settings.store_name}} . All Rights Reserved.&nbsp; All images and descriptions are not to be used without written permission. Remember to have fun and smile&nbsp; :)&nbsp;&nbsp;<a class="link-secondary" href="{{sitemap}}">Site Map</a></p>
+                <p class="small">© {{moment format="YYYY"}} {{settings.store_name}} . All Rights Reserved.&nbsp; All images and descriptions are not to be used without written permission. Remember to have fun and smile&nbsp; :)&nbsp;&nbsp;<a class="link-secondary" href="{{urls.sitemap}}">Site Map</a></p>
             </div>
         </div>
     </div>
@@ -235,43 +239,43 @@
         <div class="row pt-0">
             <div class="col">
                 <h5 class="my-2">A</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/addendum-stickers/"><span>Addendum Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/adhesive-vehicle-wrap/"><span>Adhessive Wrap</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-air-fresheners/"><span>Air Fresheners</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/addendum-stickers/"><span>Addendum Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/adhesive-vehicle-wrap/"><span>Adhessive Wrap</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/car-air-fresheners/"><span>Air Fresheners</span></a></div>
                 <h5 class="ml-2 mt-3">B</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dealership-balloons/"><span>Balloons</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/buyers-guide/"><span>Buyers Guides</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/buyers-guide-holders/"><span>Buyers Guide Holders</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/dealership-balloons/"><span>Balloons</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/buyers-guide/"><span>Buyers Guides</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/buyers-guide-holders/"><span>Buyers Guide Holders</span></a></div>
                 <h5 class="ml-2 mt-3">C</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-bows/"><span>Car Bows</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/car-bows/"><span>Car Bows</span></a></div>
                 <h5 class="ml-2 mt-3">D</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/deal-jackets/"><span>Deal Jackets</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dispatch-numbers/"><span>Dispatch Numbers</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/deal-jackets/"><span>Deal Jackets</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/dispatch-numbers/"><span>Dispatch Numbers</span></a></div>
                 <h5 class="my-2">F</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-window-flags/"><span>Flags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/all-car-floor-mats-carpet-paper-plastic-adhesive/"><span>Floor Mats</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/floor-mat-dispensers/"><span>Floor Mat Racks</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/car-dealership-forms/"><span>Forms</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/car-window-flags/"><span>Flags</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/all-car-floor-mats-carpet-paper-plastic-adhesive/"><span>Floor Mats</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/floor-mat-dispensers/"><span>Floor Mat Racks</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/car-dealership-forms/"><span>Forms</span></a></div>
                 <h5 class="ml-2 mt-3">H</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/hang-tags/"><span>Hang Tags</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/hang-tags/"><span>Hang Tags</span></a></div>
                 <h5 class="ml-2 mt-3">K</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/key-cabinets/"><span>Key Storage</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/key-tags/"><span>Key Tags</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/key-cabinets/"><span>Key Storage</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/key-tags/"><span>Key Tags</span></a></div>
                 <h5 class="ml-2 mt-3">L</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/temp-tag-covers/"><span>License Plate Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/screws/"><span>License Plate Screws</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/license-plate-envelopes/"><span>License Plate Envelopes</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/temp-tag-covers/"><span>License Plate Bags</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/screws/"><span>License Plate Screws</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/license-plate-envelopes/"><span>License Plate Envelopes</span></a></div>
                 <h5 class="ml-2 mt-3">M</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/night-drop-boxes/"><span>Markers</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/night-drop-boxes/"><span>Markers</span></a></div>
                 <h5 class="ml-2 mt-3">N</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/night-drop-boxes/"><span>Night Drop Boxes</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/night-drop-boxes/"><span>Night Drop Boxes</span></a></div>
             </div>
             <div class="col">
                 <h5 class="my-2">O</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/windshield-year-stickers/"><span>Oval Model Years</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/windshield-year-stickers/"><span>Oval Model Years</span></a></div>
                 <h5 class="ml-2 mt-3">P</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/paint-markers/"><span>Paint Pens / Markers</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/paint-markers/"><span>Paint Pens / Markers</span></a></div>
                 <h5 class="ml-2 mt-3">R</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/repair-orders-holders/"><span>Repair Orders (ROs)</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/repair-orders-holders/"><span>Repair Order Holders</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/repair-orders-holders/"><span>Repair Orders (ROs)</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/repair-orders-holders/"><span>Repair Order Holders</span></a></div>
                 <h5 class="ml-2 mt-3">S</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/seat-covers/"><span>Seat Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dispatch-numbers/"><span>Service Control Numbers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/service-due-reminder-stickers"><span>Service Due Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/service-forms/"><span>Service Forms</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/dealership-signs/"><span>Signs</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/steering-wheel-covers/"><span>Steering Wheel Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/stock-stickers/"><span>Stock Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/lot-streamers/"><span>Streamers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/swooper-banners/"><span>Swooper Banners</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/seat-covers/"><span>Seat Covers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/dispatch-numbers/"><span>Service Control Numbers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/service-due-reminder-stickers"><span>Service Due Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/service-forms/"><span>Service Forms</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/dealership-signs/"><span>Signs</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/steering-wheel-covers/"><span>Steering Wheel Covers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/stock-stickers/"><span>Stock Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/lot-streamers/"><span>Streamers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/swooper-banners/"><span>Swooper Banners</span></a></div>
                 <h5 class="my-2">T</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/temp-tag-covers/"><span>Temp Tag Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/printable-temp-tags/"><span>Tempory Tags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/time-job-tickets/"><span>Time &amp; Job Tickets</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/tire-covers/"><span>Tire Bags</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/tire-covers/"><span>Tire Maskers</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/temp-tag-covers/"><span>Temp Tag Bags</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/printable-temp-tags/"><span>Tempory Tags</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/time-job-tickets/"><span>Time &amp; Job Tickets</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/tire-covers/"><span>Tire Bags</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/tire-covers/"><span>Tire Maskers</span></a></div>
                 <h5 class="ml-2 mt-3">U</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/underhood-signs/"><span>Underhood Signs</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/underhood-signs/"><span>Underhood Signs</span></a></div>
                 <h5 class="ml-2 mt-3">V</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/vehicle-covers/"><span>Vehicle Covers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/vehicle-not-for-sale-sticker-100-per-pack/"><span>Vehicle Not For Sale Stickers</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/vehicle-covers/"><span>Vehicle Covers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/vehicle-not-for-sale-sticker-100-per-pack/"><span>Vehicle Not For Sale Stickers</span></a></div>
                 <h5 class="ml-2 mt-3">W</h5>
-                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/window-stickers/"><span>Window Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="https://cheapdealersupplies.com/windshield-numbers/"><span>Windshield Digits</span></a></div>
+                <div class="list-group"><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/window-stickers/"><span>Window Stickers</span></a><a class="list-group-item list-group-item-action p-1" href="{{settings.base_url}}/windshield-numbers/"><span>Windshield Digits</span></a></div>
             </div>
         </div>
         <div class="row">

@@ -11,28 +11,87 @@ blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
 ---
-{{#partial "hero"}}
-    {{{region name="home_below_menu"}}}
-    {{#and carousel carousel.slides.length}}
-        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows play_pause_button=theme_settings.homepage_show_carousel_play_pause_button}}
-    {{/and}}
-    {{{region name="home_below_carousel"}}}
-{{/partial}}
 
 {{#partial "page"}}
 
+<div class="container mb-4">
     {{#each shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
 
+    <div class="row mb-3">
+        <div class="col-12 col-md-3 text-end d-none d-md-flex align-items-end"><img class="img-fluid h-100" src="https://cdn.cdslink.net/join-the-cheap-nation-png24.webp" loading="lazy" /></div>
+        <div class="col px-0">
+            <div id="carousel-1" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                  {{#each carousel.slides}}
+                    <div class="carousel-item {{#if @first}}active{{/if}}"><a href="{{url}}"><img class="w-100 d-block" src="{{this.image}}" alt="{this.alt_text}" /></a></div>
+                    {{/each}}
+                </div>
+                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                <div class="carousel-indicators"><button class="active" type="button" data-bs-target="#carousel-1" data-bs-slide-to="0"></button><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <h1 class="text-center">Offering the Best Car Dealership Supplies since 2015</h1>
+            <h3 class="text-center"><em>Trusted by over 10,000 dealerships &amp; repair shops every year!</em></h3>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="card-group">
+                <div class="card"><img class="card-img-top w-100 d-block" src="https://cdn11.bigcommerce.com/s-n2com0j/product_images/uploaded_images/key-tags-car-dealer-supplies.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Key Tags</h4>
+                        <p class="card-text">We carry a huge selection of dealership key tags, including Versa-Tags</p><button class="btn btn-primary" type="button">Shop</button>
+                    </div>
+                </div>
+                <div class="card"><img class="card-img-top w-100 d-block" src="https://cdn1.bigcommerce.com/n-ou1isn/n2com0j/product_images/uploaded_images/deal-jackets-envelopes-category.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Deal Jackets</h4>
+                        <p class="card-text">Many colors &amp; sizes of automotive deal jackets in-stock for your new or used car dealership</p><button class="btn btn-primary" type="button">Shop</button>
+                    </div>
+                </div>
+                <div class="card"><img class="card-img-top w-100 d-block" src="https://cdn1.bigcommerce.com/n-ou1isn/n2com0j/product_images/uploaded_images/hang-tags-dispatch-category.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Service Dispatch Tags</h4>
+                        <p class="card-text">Mirror hang tags for every department. Our service hang tags are a top seller and our sales hang tags will sell more cars.</p><button class="btn btn-primary" type="button">Shop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card-group">
+                <div class="card"><img class="card-img-top w-100 d-block" src="https://cdn11.bigcommerce.com/s-n2com0j/product_images/uploaded_images/license-plate-car-dealer-supplies.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">License Plate Bags &amp; Screws</h4>
+                        <p class="card-text">Demo Plate Bags to Temp Tag covers to license plate screws our lineup is sure to impress.</p><button class="btn btn-primary" type="button">Shop</button>
+                    </div>
+                </div>
+                <div class="card"><img class="card-img-top w-100 d-block" src="https://cdn11.bigcommerce.com/s-n2com0j/product_images/uploaded_images/smile-donkey-in-warehouse.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Your dealer supply store!</h4>
+                        <p class="card-text">Let us show you how we have fun and deliver the best product and service experience in the industry!</p><button class="btn btn-primary" type="button">Shop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="main full">
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+        <hr class="mb-4">
     {{/if}}
     {{{region name="home_below_featured_products"}}}
 
     {{#if products.top_sellers}}
         {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+        <hr class="mb-4">
     {{/if}}
     {{{region name="home_below_top_products"}}}
 
